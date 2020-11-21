@@ -1,2 +1,40 @@
-# py-service-sdk
-Backend service python sdk support
+Zipha Base Sdk / Package
+
+1. setup.py
+	a. All the dependencies for the package has been defined.
+	b. The package information also has been defined.
+
+2. zp(actual code folder)
+	a. zp.api.api file defines the router which will be used in each services to register service level endpoints.
+	b. core.config file defines following.
+		1. SECRET_KEY & SECRET_SALT : used for token creation and verification of email, reset password and acces token.
+		2. EMAIL_VERIFY_TOKEN_EXPIRE_MINUTES & RESET_PASSWORD_TOKEN_EXPIRE_MINUTES:  expiry durations of tokens for email verification and password reset.
+	c. core.jwt:  file is used to generate and validate user access tokens.
+
+	d. core.permission: file is used to define permission classes.
+
+	e. zp.utils: contains classes and functions of general utility used in multiple places throughout different services.
+
+	f. db folder:  defines the configuration information  and connections for service level databases to run.
+
+	g. models defines base db models used in different services.
+
+3. to create a new version of the packages.
+	a. first  change the package version in setup.py.
+
+	b. cd to your repository folder .
+
+	c. make sure you  have  installed python in your system. 
+
+	d . finally run the "python setup.py sdist" : it will create a folder called dist and stores the package file with .tar.gz extention inside it ex: dist/zq-0.0.1.tar.gz
+
+4. to install package.
+	-clone the sdk repository.
+	- open the dist folder under sdk repositoryf folder.
+	- copy the file with .tar.gz extention into targeted folder.
+	- finally run "pip install sample-0.0.1.tar.gz "   this will install  zipha sdk to targeted env. 
+
+
+
+
+
