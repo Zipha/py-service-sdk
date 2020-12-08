@@ -35,7 +35,7 @@ from .db.mongodb_utils import close_mongo_connection, connect_to_mongo
 app = FastAPI(title=PROJECT_NAME)
 
 if not ALLOWED_HOSTS:
-	   ALLOWED_HOSTS = ["*"]
+	   ALLOWED_HOSTS = ["http://thezipha.com/","http://www.thezipha.com/","https://thezipha.com/","https://www.thezipha.com/","http://35.190.15.220/","http://localhost:3001/","http://localhost:3000/","http://localhost:3002/"]
 
 app.add_middleware(
 	    CORSMiddleware,

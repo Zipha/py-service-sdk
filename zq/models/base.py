@@ -61,7 +61,7 @@ class Account(BaseModel):
 class AccountInDB(DBModelMixin, AccountBase):
     ''' This class is used to store in the DB '''
     
-    
+    first_time_usage:bool=True
     salt: str = ''
 
 

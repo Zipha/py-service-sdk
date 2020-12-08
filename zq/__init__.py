@@ -15,7 +15,7 @@ PROJECT_NAME = os.environ["PROJECT_NAME"]
 ALLOWED_HOSTS =  ["*"]
 KAFKA_URL = os.environ["KAFKA_URL"]
 REDIS_PORT = os.environ["REDIS_PORT"]
-REDIS_HOST = os.environ["REDIS_PORT"]
+REDIS_HOST = os.environ["REDIS_HOST"]
 
 
 # with open("config.yml", "r") as ymlfile:
@@ -49,4 +49,4 @@ REDIS_HOST = os.environ["REDIS_PORT"]
 # 	REDIS_HOST = redis['REDIS_HOST']
 
 
-	
+# 	

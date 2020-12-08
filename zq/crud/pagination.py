@@ -2,7 +2,7 @@ from typing import Optional,List
 from fastapi import  Request
 from zq.db.mongodb import AsyncIOMotorClient
 from zq.db.db_config import database_name
-
+import pymongo
 
 class Paginate:
     def __init__(self,collection_name,conn:AsyncIOMotorClient,request:Request,limit:int=10,offset:int=0,q:Optional[dict]=None):
@@ -55,7 +55,7 @@ class Paginate:
 
     async def get_list(self,ListMethod):
         '''get the data list '''
-        result_rows =  self.conn[database_name][self.collection_name].find(self.q).skip(self.offset).limit(self.limit)
+        result_rows =  self.conn[database_name][self.collection_name].find(self.q).skip(self.offset).limit(self.limit).sort('created_at',pymongo.DESCENDING)
         results: List[ListMethod] = []
         async for row in result_rows:
             results.append(
