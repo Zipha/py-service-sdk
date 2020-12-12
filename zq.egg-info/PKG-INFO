@@ -1,6 +1,6 @@
 Metadata-Version: 1.1
 Name: zq
-Version: 0.0.1
+Version: 0.0.2-local
 Summary: zipha base package 
 Home-page: https://github.com//ziphasdk
 Author: vishwa
@@ -35,15 +35,19 @@ Description: Zipha Base Sdk / Package
         	c. make sure you  have  installed python in your system. 
         
         	d . finally run the "python setup.py sdist" : it will create a folder called dist and stores the package file with .tar.gz extention inside it ex: dist/zq-0.0.1.tar.gz
-        
-        4. to install package.
+         
+        4. to create package.
         	-clone the sdk repository.
-        	- open the dist folder under sdk repositoryf folder.
-        	- copy the file with .tar.gz extention into targeted folder.
-        	- finally run "pip install sample-0.0.1.tar.gz "   this will install  zipha sdk to targeted env. 
+        	- changedirectory (cd) into repository.
+        	- make sure you have python installed in your system.
+        	- finally run "python setup.py sdist" CMD to create new package (to change the version go to setup.py file change the 	value of  "version" variable). 
+        	- now new package will be located in "repository_folder/dist" folder .
         
         
-        
+        5. to install package.
+        	- open the dist folder under sdk repository folder.
+        	- copy the file with .tar.gz extension into targeted folder.
+        	- finally run "pip install sample-0.0.1.tar.gz "   this will install  zipha sdk to targeted env.
         
         
         

@@ -3,3 +3,11 @@ uvicorn
 motor
 pyyaml
 itsdangerous
+redis
+databases
+dataclasses
+bcrypt
+jwt
+pyjwt
+passlib
+pydantic[email]
