@@ -3,7 +3,6 @@ from typing import Optional
 
 import jwt
 from fastapi import Depends, Header
-from jwt import PyJWTError
 from starlette.exceptions import HTTPException
 from starlette.status import HTTP_403_FORBIDDEN, HTTP_404_NOT_FOUND, HTTP_401_UNAUTHORIZED
 
@@ -38,7 +37,7 @@ async def _get_current_user(
     try:
         payload = jwt.decode(token, str(SECRET_KEY), algorithms=[ALGORITHM])
         token_data = TokenPayload(**payload)
-    except PyJWTError:
+    except jwt.PyJWTError:
         raise HTTPException(
             status_code=HTTP_403_FORBIDDEN, detail="Could not validate credentials"
         )
@@ -51,7 +50,7 @@ async def _get_current_candidate(
     try:
         payload = jwt.decode(token, str(SECRET_KEY), algorithms=[ALGORITHM])
         token_data = TokenPayload(**payload)
-    except PyJWTError:
+    except jwt.PyJWTError:
         raise HTTPException(
             status_code=HTTP_403_FORBIDDEN, detail="Could not validate credentials"
         )
@@ -69,7 +68,7 @@ async def _get_current_institution(
     try:
         payload = jwt.decode(token, str(SECRET_KEY), algorithms=[ALGORITHM])
         token_data = TokenPayload(**payload)
-    except PyJWTError:
+    except jwt.PyJWTError:
         raise HTTPException(
             status_code=HTTP_403_FORBIDDEN, detail="Could not validate credentials"
         )
@@ -88,7 +87,7 @@ async def _get_current_superuser(
     try:
         payload = jwt.decode(token, str(SECRET_KEY), algorithms=[ALGORITHM])
         token_data = TokenPayload(**payload)
-    except PyJWTError:
+    except jwt.PyJWTError:
         raise HTTPException(
             status_code=HTTP_403_FORBIDDEN, detail="Could not validate credentials"
         )
@@ -116,7 +115,7 @@ async def _get_current_active_user(
     try:
         payload = jwt.decode(token, str(SECRET_KEY), algorithms=[ALGORITHM])
         token_data = TokenPayload(**payload)
-    except PyJWTError:
+    except jwt.PyJWTError:
         raise HTTPException(
             status_code=HTTP_403_FORBIDDEN, detail="Could not validate credentials"
         )

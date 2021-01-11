@@ -8,7 +8,7 @@ Zipha Base Sdk / Package
 	a. zp.api.api file defines the router which will be used in each services to register service level endpoints.
 	b. core.config file defines following.
 		1. SECRET_KEY & SECRET_SALT : used for token creation and verification of email, reset password and acces token.
-		2. EMAIL_VERIFY_TOKEN_EXPIRE_MINUTES & RESET_PASSWORD_TOKEN_EXPIRE_MINUTES:  expiry durations of tokens for email verification and password  reset.
+		2. EMAIL_VERIFY_TOKEN_EXPIRE_MINUTES & RESET_PASSWORD_TOKEN_EXPIRE_MINUTES:  expiry durations of tokens for email verification and password reset.
 	c. core.jwt:  file is used to generate and validate user access tokens.
 
 	d. core.permission: file is used to define permission classes.
@@ -24,7 +24,7 @@ Zipha Base Sdk / Package
 
 	b. cd to your repository folder .
 
-	c. make sure you have installed python in your system. 
+	c. make sure you  have  installed python in your system. 
 
 	d . finally run the "python setup.py sdist" : it will create a folder called dist and stores the package file with .tar.gz extention inside it ex: dist/zq-0.0.1.tar.gz
  
@@ -36,8 +36,9 @@ Zipha Base Sdk / Package
 	- now new package will be located in "repository_folder/dist" folder .
 
 
-5. to install package on local machine
+5. to install package.
 	- open the dist folder under sdk repository folder.
 	- copy the file with .tar.gz extension into targeted folder.
 	- finally run "pip install sample-0.0.1.tar.gz "   this will install  zipha sdk to targeted env.
+
 
