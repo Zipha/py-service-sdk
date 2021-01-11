@@ -19,5 +19,5 @@ setuptools.setup(
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
-    install_requires=['fastapi','uvicorn','motor','pyyaml','itsdangerous','redis','databases','dataclasses','bcrypt','jwt','pyjwt','passlib',' pydantic[email]']
+    install_requires=['fastapi','uvicorn','motor','pyyaml','itsdangerous','redis','databases','dataclasses','bcrypt','pyjwt','passlib',' pydantic[email]']
 )

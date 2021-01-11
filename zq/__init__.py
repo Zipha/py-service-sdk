@@ -46,7 +46,4 @@ REDIS_HOST = os.environ["REDIS_HOST"]
 # if cfg['redis']:
 # 	redis = cfg['redis']
 # 	REDIS_PORT=redis['REDIS_PORT']
-# 	REDIS_HOST = redis['REDIS_HOST']
-
-
-# 	
+# 	REDIS_HOST = redis['REDIS_HOST'] 	
